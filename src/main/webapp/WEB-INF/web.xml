@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+
+    <servlet>
+        <servlet-name>myServlet</servlet-name>
+        <servlet-class>com.example.MyServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>myServlet</servlet-name>
+        <url-pattern>/greet</url-pattern>
+    </servlet-mapping>
+
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+
+</web-app>
+
+Step 3: index.jsp (Welcome Page with Form)
+This will be your application's entry point. Place this in src/main/webapp/.
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>My Java Web App</title>
+</head>
+<body>
+    <h1>Welcome to My Java Web App!</h1>
+    <form action="greet" method="post">
+        <label for="name">Enter your name:</label><br>
+        <input type="text" id="name" name="userName"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
